@@ -1,5 +1,5 @@
 test:
-  host: <% ENV['CI'] == '1' ? 'postgres' : '' %>
-  password: <% ENV['CI'] == '1' ? '123' : '' %>
+  host: <%= ENV['CI'] == '1' ? 'postgres' : '' %>
+  password: <%= ENV['CI'] == '1' ? '123' : '' %>
   adapter: postgresql
   database: apitok_test
