@@ -10,7 +10,9 @@ require "apitok"
 require "apitok/rails"
 
 Combustion.path = 'test/rails'
-Combustion.initialize! :active_record
+Combustion.initialize! :active_record,
+  database_reset: true,
+  load_schema: true
 
 Minitest::Reporters.use! [Minitest::Reporters::SpecReporter.new]
 
